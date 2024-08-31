@@ -21,3 +21,13 @@
     3. post that you may need to install ipykernel as well
     4. you can the select the interpreter from the to right corner 
 </details>
+
+<details> 
+    <summary><H1>Create_venv.sh</H1></summary>
+To save time you can use this shell script which will
+
+1. Create a venv in the current working directory
+2. Make sure you move the reuqired directory when you are run the given script
+3. it will name the venv with the name of the folder you are working in
+4. It will install this basic lib numpy pandas ipykernel
+</details>
