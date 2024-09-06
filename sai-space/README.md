@@ -6,7 +6,9 @@
 ├── assets
 │   └── fonts
 │       └── custom-font.ttf
+├── blog.html
 ├── images
+│   ├── new-twitter-logo-x-2023-twitter-x-logo-vector-download_691560-10806.avif
 │   └── profile.jpg
 ├── index.html
 ├── scripts
