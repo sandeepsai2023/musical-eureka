@@ -99,3 +99,63 @@ footer {
 #blog-posts a:hover {
     text-decoration: underline;
 }
+#projects {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin: 20px 0;
+}
+
+#projects h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projects li {
+    margin: 15px 0;
+}
+
+.collapsible {
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.collapsible:hover {
+    background-color: #005bb5;
+}
+
+.content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.content p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.content.show {
+    max-height: 500px; /* Adjust as needed */
+}
