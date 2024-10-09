@@ -22,6 +22,7 @@ for entry in data:
 
 # Create a DataFrame from the extracted data
 df = pd.DataFrame(extracted_data)
+df['video_id'] = df['titleUrl'].apply(lambda x: re.search(r'.*v=([^&]+)', x).group(1) if re.search(r'.*v=([^&]+)', x) else None)
 
 # Display the DataFrame
 print(df)
