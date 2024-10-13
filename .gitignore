@@ -2,3 +2,4 @@
 Testing/
 Testing_2/
 **/Data/
+.env
