@@ -1,0 +1,353 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.29.62:8501
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+            
+2024-10-13 12:34:53.500 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 14, in <module>
+    temp = df_video_metadata_new.groupby('channelTitle').agg(num_of_videos=('video_id',pd.Series.nunique)).reset_index().sort_values(by='num_of_videos',ascending=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/groupby/generic.py", line 1432, in aggregate
+    result = op.agg()
+             ^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/apply.py", line 190, in agg
+    return self.agg_dict_like()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/apply.py", line 423, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/apply.py", line 1608, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/apply.py", line 462, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/apply.py", line 663, in normalize_dictlike_arg
+    raise KeyError(f"Column(s) {list(cols)} do not exist")
+KeyError: "Column(s) ['video_id'] do not exist"
+  Stopping...
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.4.131.122:8501
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+            
+2024-10-14 14:10:05.966 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 29, in <module>
+    df_final['time'] = pd.to_datetime(df_final['time'])
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/tools/datetimes.py", line 1067, in to_datetime
+    values = convert_listlike(arg._values, format)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/tools/datetimes.py", line 433, in _convert_listlike_datetimes
+    return _array_strptime_with_fallback(arg, name, utc, format, exact, errors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/tools/datetimes.py", line 467, in _array_strptime_with_fallback
+    result, tz_out = array_strptime(arg, fmt, exact=exact, errors=errors, utc=utc)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "strptime.pyx", line 501, in pandas._libs.tslibs.strptime.array_strptime
+  File "strptime.pyx", line 451, in pandas._libs.tslibs.strptime.array_strptime
+  File "strptime.pyx", line 583, in pandas._libs.tslibs.strptime._parse_with_format
+ValueError: time data "2024-07-20 05:55:42+00:00" doesn't match format "%Y-%m-%d %H:%M:%S.%f%z", at position 14. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:47: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:44: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:47: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:47: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:44: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:47: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+Matplotlib is building the font cache; this may take a moment.
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:83: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:83: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:83: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:85: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:48: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:50: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:47: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:50: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:50: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:87: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:50: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+2024-10-14 16:02:20.169 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 33, in <module>
+    tags =st.sidebar.input_text("Enter the tags to filter the data")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/delta_generator.py", line 347, in wrapper
+    raise StreamlitAPIException(message)
+streamlit.errors.StreamlitAPIException: `input_text()` is not a valid Streamlit command.
+2024-10-14 16:09:56.617 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 42, in <module>
+    temp_agg = temp.groupby('date').agg(num_of_videos=('video_id',pd.Series.nunique)).reset_index().sort_values(by='num_of_videos',ascending=False)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/frame.py", line 9183, in groupby
+    return DataFrameGroupBy(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/groupby/groupby.py", line 1329, in __init__
+    grouper, exclusions, obj = get_grouper(
+                               ^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/pandas/core/groupby/grouper.py", line 1043, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'date'
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:66: UserWarning:
+
+Converting to PeriodArray/Index representation will drop timezone information.
+
+2024-10-14 16:16:57.016 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 51, in <module>
+    start_date, end_date = st.sidebar.date_input(
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/elements/widgets/time_widgets.py", line 661, in date_input
+    return self._date_input(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/elements/widgets/time_widgets.py", line 746, in _date_input
+    parsed_values = _DateInputValues.from_raw_values(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/elements/widgets/time_widgets.py", line 165, in from_raw_values
+    parsed_min = _parse_min_date(
+                 ^^^^^^^^^^^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/elements/widgets/time_widgets.py", line 123, in _parse_min_date
+    raise StreamlitAPIException(
+streamlit.errors.StreamlitAPIException: DateInput min should either be a date/datetime or None
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+2024-10-14 16:19:22.109 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 55, in <module>
+    start_date, end_date = st.sidebar.date_input(
+    ^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+2024-10-14 16:19:48.916 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 55, in <module>
+    start_date, end_date = st.sidebar.date_input(
+    ^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+2024-10-14 16:20:05.211 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/YoutubeDataAnalysis_venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py", line 55, in <module>
+    start_date, end_date = st.sidebar.date_input(
+    ^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/streamlit_app/script.py:166: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  Stopping...
