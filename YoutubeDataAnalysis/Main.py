@@ -115,7 +115,7 @@ df_video_metadata_new_set = set(df_video_metadata_new['id'])
 df_video_ids_diff = df_video_ids_set - df_video_metadata_new_set
 
 # # Step 2: Read the index from in .txt file if it null or empty then start from 0 else read the last index and start from there
-# index_file = '/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/Data/index.txt'
+index_file = '/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/Data/index.txt'
 # if os.path.exists(index_file):
 #     with open(index_file, 'r') as file:
 #         last_index = int(file.read())
@@ -136,8 +136,8 @@ for index, video_id in enumerate(df_video_ids_diff):
         response.to_csv('/Users/saisandeep/GitRepo/musical-eureka/YoutubeDataAnalysis/Data/video_metadata_new.csv', mode='a', index=False, header=False)
         # Step 5: Incase of no error store the data in df and append it to the csv file
         # df_data = df_data._append(response, ignore_index=True)
-        # with open(index_file, 'w') as file:
-        #     file.write(str(index))
+        with open(index_file, 'w') as file:
+            file.write(str(index))
     except Exception as e:
         # Step 4: If there is an error and if it is due to limit breach store the video_id and its index in a .txt file
         if 'limit' in str(e):
