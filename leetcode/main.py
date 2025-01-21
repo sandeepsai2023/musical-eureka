@@ -74,3 +74,29 @@ class Solution:
 
             # print(i,max_i,temp_value,max_val)
         return max_val
+    
+    # def mincostTickets(self, days: List[int], costs: List[int]) -> int:
+
+
+    def stringMatching(self, words: List[str]) -> List[str]:
+        substr = list()
+        for i in range(0,len(words)):
+            print(i)
+            for j in range(i+1,len(words)):
+                print(j)
+                if (words[i] in words[j]):
+                    substr.append(words[i])
+                elif (words[j] in words[i]):
+                    substr.append(words[j])
+                else:
+                    continue
+        
+        return list(set(substr))
+
+
+    def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
+        # for i in words1:
+        #     ls = [i.contains(j) for j in ]
+        return 0
+        
+# print(Solution().stringMatching(words = ["mass","as","hero","superhero"]))
